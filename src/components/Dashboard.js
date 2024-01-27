@@ -10,7 +10,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://blackcoffer-backend-9mgu.onrender.com'); // Replace with your API URL
+        const response = await fetch('http://localhost:5000/api/data'); // Replace with your API URL
         const jsonData = await response.json();
         console.log('Fetched data:', jsonData);
         setData(jsonData.slice(0, 1000)); // Take only the first 20 data points
